@@ -9,6 +9,13 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     return [...cartItems, {...cartItemToAdd, quantity: 1}]
 }
 
-// export const clearItemFromCart = (cartItems, cartItemToAdd) => {
-//     return cartItems.filter(item=> item.id)
-// }
+export const removeItemFromCart = (items, itemToRemove) => {
+    const existingCartItem = items.find(item => item.id === itemToRemove.id);
+    console.log(existingCartItem);
+    if(existingCartItem.quantity === 1){
+        return items.filter(item => item.id !== itemToRemove.id)
+    }
+    return items.map(item => item.id === itemToRemove.id ? 
+                            {...item, quantity: item.quantity - 1 } : item
+                        )
+}
