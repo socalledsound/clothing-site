@@ -38,7 +38,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react-router-dom": "^5.2.0",
     "react-stripe-checkout": "^2.6.3",
     "redux-persist": "^6.0.0",
